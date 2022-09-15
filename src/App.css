@@ -39,9 +39,15 @@
    margin-inline: 1rem;
    font-size: 20px;
    font-weight: 600;
-   color: darkslategray;
+   color: #001d3d;
  }
-
+ .active{
+  text-decoration: none;
+   margin-inline: 1rem;
+   font-size: 20px;
+   font-weight: 600;
+   color: #8d0000;
+ }
  .search {
    margin: 1rem;
    display: grid;
@@ -70,7 +76,6 @@
    bottom: 0;
    color: black;
  }
-
  .new {
    display: flex;
    justify-content: center;
@@ -326,3 +331,18 @@
  #dark .lightInput {
    border-bottom-color: white;
  }
+
+ #dark .navLink {
+  text-decoration: none;
+  margin-inline: 1rem;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+#dark .active{
+ text-decoration: none;
+  margin-inline: 1rem;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(9, 106, 185);
+}

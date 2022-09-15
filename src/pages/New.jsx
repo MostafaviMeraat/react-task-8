@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react'
 import Context from '../store/Context'
-import { NotificationContainer, NotificationManager } from 'react-notifications'
 
 const New = () => {
   const context = useContext(Context)
@@ -27,6 +26,9 @@ const New = () => {
   }
 
   const handelSubmit = () => {
+    if(user.name === '' || user.email === ''){
+      alert('Please enter your name and email')
+    }
     context.setUsers([...context.users, user])
     setSuccess(true)
     setTimeout(() => {

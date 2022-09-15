@@ -14,15 +14,17 @@ const SharedLayout = () => {
     context.toggleTheme()
   }
 
+
+  // className={({isActive }) => (isActive ? 'active navLink' : 'navLink')}
   return (
     <div className='shared'>
       <h2 className='header'>{context.header}</h2>
       <i className="back fa-solid fa-arrow-left" onClick={back} ></i>
       <div className="wrapper">
-        <NavLink to='/' className='navLink'>User Info </NavLink>
+        <NavLink to='/' >User Info </NavLink>
         {/* <NavLink to='/edit/:index' className='navLink'>Edit </NavLink> */}
-        <NavLink to='/new' className='navLink'>New User </NavLink>
-        <NavLink to='/setting' className='navLink'>Setting </NavLink>
+        <NavLink to='/new'  className={({isActive }) => (isActive ? 'active' : 'navLink')} >New User </NavLink>
+        <NavLink to='/setting'  className={({isActive }) => (isActive ? 'active' : 'navLink')} >Setting </NavLink>
         <div>
           <ReactSwitch onChange={changeTheme} checked={context.theme === 'dark'} />
           <p className='whiteText'>{context.theme} Mode</p>
