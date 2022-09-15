@@ -1,0 +1,328 @@
+ body {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+ .App {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   overflow-x: hidden;
+   min-height: 100vh;
+ }
+
+ #light {
+   background-color: rgb(255, 255, 255);
+ }
+
+ #dark {
+   background-color: #212222;
+ }
+
+ .userInfo {
+   display: grid;
+   place-items: center;
+ }
+
+ .shared {
+   margin: 2rem;
+ }
+
+ .wrapper {
+   display: flex;
+   justify-content: space-around;
+ }
+
+ .navLink {
+   text-decoration: none;
+   margin-inline: 1rem;
+   font-size: 20px;
+   font-weight: 600;
+   color: darkslategray;
+ }
+
+ .search {
+   margin: 1rem;
+   display: grid;
+   place-items: center;
+ }
+
+ .search>* {
+   width: 50vw;
+   max-width: 400px;
+   font-size: 22px;
+   padding: .2em;
+   background: unset;
+   outline: none;
+   border: none;
+   border-bottom: 2px solid rgb(34, 34, 34);
+ }
+
+ ::placeholder {
+   padding-inline-start: 2px;
+   color: black;
+   opacity: .7;
+ }
+
+ .footer {
+   position: fixed;
+   bottom: 0;
+   color: black;
+ }
+
+ .new {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .login {
+   text-align: center;
+   margin: 12rem;
+ }
+
+ input {
+   background: unset;
+   border: none;
+   padding: .3em;
+   width: 400px;
+   border: none;
+   border-bottom: 2px solid rgb(0, 0, 0);
+   outline: none;
+   font-size: 22px;
+ }
+
+ .name,
+ .email {
+   margin: 2rem;
+ }
+
+
+
+ .button {
+   margin: 4rem;
+   display: grid;
+   place-items: center;
+ }
+
+ button {
+   background: unset;
+   outline: none;
+   border-radius: 10px;
+   width: 120%;
+   padding: .3em;
+   font-size: 24px;
+   font-weight: bolder;
+ }
+
+ button:hover,
+ button:focus {
+   background-color: black;
+   border: 2px solid white;
+   color: white;
+   scale: 1.1;
+   transition: all 300ms ease-in-out;
+ }
+
+ input:focus {
+   border-bottom: 2px solid rgb(29, 68, 196);
+   scale: 1.1;
+   transition: all 300ms ease-in-out;
+ }
+
+ .foundUserWrapper {
+   margin: 1rem;
+   width: 100%;
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: center;
+   align-items: center;
+ }
+
+ span {
+   color: #001d3d
+ }
+
+ hr {
+   color: #001d3d;
+ }
+
+ .foundUser {
+   color: black;
+   font-size: 22px;
+   position: relative;
+ }
+
+ .seen {
+   position: absolute;
+   left: -4rem;
+   top: 3rem;
+   font-size: 16px;
+ }
+
+ .redSpan {
+   color: rgb(173, 7, 7);
+ }
+
+ .edit {
+   display: grid;
+   place-items: center;
+   width: 40px;
+   position: absolute;
+   right: -4rem;
+   top: 3rem;
+   font-size: 18px;
+   font-weight: 500;
+   color: darkgreen;
+   text-decoration: none;
+ }
+
+ .edit:hover {
+   cursor: pointer;
+   scale: 1.2;
+   background-color: darkgreen;
+   color: white;
+   transition: all 300ms ease-in-out;
+   border-radius: 4px;
+ }
+
+ .back {
+   cursor: pointer;
+   scale: 1.5;
+   color: #001d3d;
+   display: grid;
+   place-items: center;
+   width: 20px;
+   height: 20px;
+   border-radius: 5px;
+
+ }
+
+ .back:hover {
+   color: white;
+   background-color: #001d3d;
+   transition: all 300ms ease-in-out;
+ }
+
+ .setting {
+   display: grid;
+   place-items: center;
+   margin: 3rem;
+   font-size: 22px;
+   font-weight: 600;
+   gap: 3rem;
+ }
+
+ .center {
+   display: flex;
+   justify-content: center;
+ }
+
+ .dark,
+ .light {
+   margin: 1rem;
+   width: 300px;
+ }
+
+ .notif {
+   font-size: 18px;
+ }
+
+ /* dark mode  */
+
+ #dark .header {
+   color: white;
+ }
+
+ #dark .back {
+   cursor: pointer;
+   scale: 1.5;
+   color: white;
+   display: grid;
+   place-items: center;
+   width: 20px;
+   height: 20px;
+   border-radius: 5px;
+ }
+
+ #dark .back:hover {
+   color: #212222;
+   background-color: white;
+   transition: all 300ms ease-in-out;
+ }
+
+ #dark .navLink {
+   text-decoration: none;
+   margin-inline: 1rem;
+   font-size: 20px;
+   font-weight: 600;
+   color: white;
+ }
+
+ #dark .footer {
+   position: fixed;
+   bottom: 0;
+   color: white;
+ }
+
+ #dark .search>* {
+   width: 50vw;
+   max-width: 400px;
+   font-size: 22px;
+   padding: .2em;
+   background: unset;
+   outline: none;
+   border: none;
+   border-bottom: 2px solid rgb(255, 255, 255);
+ }
+
+ #dark ::placeholder {
+   color: white;
+ }
+
+ #dark input {
+   color: white;
+ }
+
+ #dark .foundUser {
+   color: rgb(255, 255, 255);
+   font-size: 22px;
+   position: relative;
+ }
+
+ #dark span {
+   color: rgb(182, 182, 182);
+ }
+
+ #dark .redSpan {
+   color: rgb(182, 10, 10);
+ }
+
+ #dark .name>*,
+ #dark .email>* {
+   border-bottom-color: white;
+ }
+
+ #dark button {
+   background: unset;
+   border-color: white;
+   color: white;
+ }
+
+ #dark button:hover,
+ #dark button:focus {
+   background-color: white;
+   border: 2px solid #212222;
+   color: #212222;
+   scale: 1.1;
+   transition: all 300ms ease-in-out;
+ }
+
+ #dark .whiteText {
+   color: white;
+ }
+
+ #dark .lightInput {
+   border-bottom-color: white;
+ }
