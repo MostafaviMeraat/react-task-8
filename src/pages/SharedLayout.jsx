@@ -18,15 +18,15 @@ const SharedLayout = () => {
   // className={({isActive }) => (isActive ? 'active navLink' : 'navLink')}
   return (
     <div className='shared'>
-      <h2 className='header'>{context.header}</h2>
+      {context.checkHeader && <h2 className='header'>{context.header}</h2>}
       <i className="back fa-solid fa-arrow-left" onClick={back} ></i>
       <div className="wrapper">
-        <NavLink to='/' >User Info </NavLink>
+        <NavLink to='/' onClick={() => (context.setCheckHeader(true))}>User Info </NavLink>
         {/* <NavLink to='/edit/:index' className='navLink'>Edit </NavLink> */}
-        <NavLink to='/new'  className={({isActive }) => (isActive ? 'active' : 'navLink')} >New User </NavLink>
-        <NavLink to='/setting'  className={({isActive }) => (isActive ? 'active' : 'navLink')} >Setting </NavLink>
+        <NavLink to='/new' className={({ isActive }) => (isActive ? 'active' : 'navLink')} onClick={() => (context.setCheckHeader(false))} >New User </NavLink>
+        <NavLink to='/setting' className={({ isActive }) => (isActive ? 'active' : 'navLink')} onClick={() => (context.setCheckHeader(true))}>Setting </NavLink>
         <div>
-          <ReactSwitch onChange={changeTheme} checked={context.theme === 'dark'} />
+          <ReactSwitch onChange={changeTheme} checked={context.theme === 'dark'} onClick={() => (context.setCheckHeader(true))} />
           <p className='whiteText'>{context.theme} Mode</p>
         </div>
 

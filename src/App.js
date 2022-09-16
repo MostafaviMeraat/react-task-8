@@ -13,6 +13,7 @@ import ReactSwitch from 'react-switch'
 
 function App() {
 
+  const [checkHeader, setCheckHeader] = useState(true)
   const [theme, setTheme] = useState('light')
   const [header, setHeader] = useState('header')
   const [footer, setFooter] = useState('footer')
@@ -35,7 +36,7 @@ function App() {
 
   return (
     <Context.Provider value={{
-      toggleTheme, header, setHeader, footer, setFooter, users, setUsers, theme
+      checkHeader, setCheckHeader, toggleTheme, header, setHeader, footer, setFooter, users, setUsers, theme
     }}>
       <div className="App" id={theme}>
         <BrowserRouter>
