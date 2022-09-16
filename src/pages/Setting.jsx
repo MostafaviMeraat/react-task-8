@@ -18,6 +18,10 @@ const Setting = () => {
     context.toggleTheme()
   }
 
+  const headerNfooterColor = (e) => {
+    context.setColor(e.target.value)
+  }
+
 
   return (
     <div className='setting'>
@@ -72,23 +76,13 @@ const Setting = () => {
         </div>
         {/* dark color */}
         <div className='whiteText'>
-          Choose Dark Color
+          Choose Header and Footer Color
           <div>
             <input
               className='lightInput'
               type='text'
               name='darkColor'
-            />
-          </div>
-        </div>
-        {/* light color */}
-        <div className='whiteText'>
-          Choose Light Color
-          <div>
-            <input
-              className='lightInput'
-              type='text'
-              name='LightColor'
+              onChange={headerNfooterColor}
             />
           </div>
         </div>

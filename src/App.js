@@ -33,10 +33,11 @@ function App() {
   const toggleTheme = () => {
     setTheme((current) => (current === 'light' ? 'dark' : 'light'))
   }
+  const [color, setColor] = useState('')
 
   return (
     <Context.Provider value={{
-      checkHeader, setCheckHeader, toggleTheme, header, setHeader, footer, setFooter, users, setUsers, theme
+      checkHeader, setCheckHeader, toggleTheme, header, setHeader, footer, setFooter, users, setUsers, theme, color, setColor
     }}>
       <div className="App" id={theme}>
         <BrowserRouter>

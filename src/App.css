@@ -41,13 +41,15 @@
    font-weight: 600;
    color: #001d3d;
  }
- .active{
-  text-decoration: none;
+
+ .active {
+   text-decoration: none;
    margin-inline: 1rem;
    font-size: 20px;
    font-weight: 600;
    color: #8d0000;
  }
+
  .search {
    margin: 1rem;
    display: grid;
@@ -76,6 +78,7 @@
    bottom: 0;
    color: black;
  }
+
  .new {
    display: flex;
    justify-content: center;
@@ -290,6 +293,12 @@
    color: white;
  }
 
+ #dark input:focus {
+   border-bottom: 2px solid rgb(9, 106, 185);
+   scale: 1.1;
+   transition: all 300ms ease-in-out;
+ }
+
  #dark .foundUser {
    color: rgb(255, 255, 255);
    font-size: 22px;
@@ -333,16 +342,17 @@
  }
 
  #dark .navLink {
-  text-decoration: none;
-  margin-inline: 1rem;
-  font-size: 20px;
-  font-weight: 600;
-  color: #ffffff;
-}
-#dark .active{
- text-decoration: none;
-  margin-inline: 1rem;
-  font-size: 20px;
-  font-weight: 600;
-  color: rgb(9, 106, 185);
-}
+   text-decoration: none;
+   margin-inline: 1rem;
+   font-size: 20px;
+   font-weight: 600;
+   color: #ffffff;
+ }
+
+ #dark .active {
+   text-decoration: none;
+   margin-inline: 1rem;
+   font-size: 20px;
+   font-weight: 600;
+   color: rgb(9, 106, 185);
+ }

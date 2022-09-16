@@ -14,11 +14,10 @@ const SharedLayout = () => {
     context.toggleTheme()
   }
 
-
   // className={({isActive }) => (isActive ? 'active navLink' : 'navLink')}
   return (
     <div className='shared'>
-      {context.checkHeader && <h2 className='header'>{context.header}</h2>}
+      {context.checkHeader && <h2 className='header' style={{ color: `${context.color}` }}>{context.header}</h2>}
       <i className="back fa-solid fa-arrow-left" onClick={back} ></i>
       <div className="wrapper">
         <NavLink to='/' onClick={() => (context.setCheckHeader(true))}>User Info </NavLink>
@@ -36,7 +35,7 @@ const SharedLayout = () => {
 
       <Outlet />
       <footer className='footer'>
-        <h2>{context.footer}</h2>
+        <h2 style={{ color: `${context.color}` }}>{context.footer}</h2>
       </footer>
     </div>
 
