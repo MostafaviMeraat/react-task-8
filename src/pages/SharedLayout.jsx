@@ -13,11 +13,22 @@ const SharedLayout = () => {
   const changeTheme = () => {
     context.toggleTheme()
   }
+  let unseens = 0
 
-  // className={({isActive }) => (isActive ? 'active navLink' : 'navLink')}
+  context.users.map((user) => {
+    if (user.seen === false) {
+      unseens++
+    }
+
+  })
+
   return (
     <div className='shared'>
-      {context.checkHeader && <h2 className='header' style={{ color: `${context.color}` }}>{context.header}</h2>}
+      <div className='wrapperHeader'>
+        {context.checkHeader && <h2 className='header' style={{ color: `${context.color}` }}>{context.header}</h2>}
+        <h2 className='unseens'>Not Modified: {unseens} </h2>
+      </div>
+
       <i className="back fa-solid fa-arrow-left" onClick={back} ></i>
       <div className="wrapper">
         <NavLink to='/' onClick={() => (context.setCheckHeader(true))}>User Info </NavLink>

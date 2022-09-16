@@ -34,6 +34,13 @@
    justify-content: space-around;
  }
 
+ .wrapperHeader {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-between;
+
+ }
+
  .navLink {
    text-decoration: none;
    margin-inline: 1rem;
@@ -354,5 +361,9 @@
    margin-inline: 1rem;
    font-size: 20px;
    font-weight: 600;
+   color: rgb(9, 106, 185);
+ }
+
+ #dark .unseens {
    color: rgb(9, 106, 185);
  }
